@@ -12,5 +12,7 @@ function! s:Cmd() abort
     return "explorer"
 endfunction
 
+let s:buf = expand("%:p:h")
+
 " insert or source Cmd() function here
-call system(<SID>Cmd() . " " . expand("%:p")) | bdelete . " " . expand("%:p:h") | redraw! | syntax on
+call system(<SID>Cmd() . " " . expand("%:p")) | bdelete s:buf | redraw! | syntax on
