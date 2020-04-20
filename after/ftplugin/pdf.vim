@@ -12,7 +12,7 @@ function! s:Cmd() abort
     return "explorer"
 endfunction
 
-let s:buf = expand("%:p:h")
+let s:buf = expand("%:p")
 let s:cur = bufnr('%')
 
 echo "Command: " . s:buf
