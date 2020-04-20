@@ -13,4 +13,4 @@ function! s:Cmd() abort
 endfunction
 
 " insert or source Cmd() function here
-call system(<SID>Cmd() . " " . expand("%:p")) | buffer# | bdelete# | redraw! | syntax on
+call system(<SID>Cmd() . " " . expand("%:p")) | redraw! | syntax on
