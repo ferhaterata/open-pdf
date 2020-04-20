@@ -13,6 +13,14 @@ function! s:Cmd() abort
 endfunction
 
 let s:buf = expand("%:p:h")
+let s:cur = bufnr('%')
+
+echo "Command: " . s:buf
+echo "Command: " . s:cur
 
 " insert or source Cmd() function here
-call system(<SID>Cmd() . " " . expand("%:p")) | bdelete s:buf | redraw! | syntax on
+call system(<SID>Cmd() . " " . expand("%:p"))
+
+execute "bdelete " . s:buf 
+execute "redraw!" 
+execute "syntax on"
