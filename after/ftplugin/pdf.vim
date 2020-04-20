@@ -22,5 +22,5 @@ echo "Command: " . s:cur
 call system(<SID>Cmd() . " " . expand("%:p"))
 
 execute "bdelete " . s:buf 
-execute "redraw!" 
-execute "syntax on"
+" execute "redraw!" 
+" execute "syntax on"
