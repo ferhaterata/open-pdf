@@ -15,12 +15,9 @@ endfunction
 let s:buf = expand("%:p")
 let s:cur = bufnr('%')
 
-echo "Command: " . s:buf
-echo "Command: " . s:cur
-
 " insert or source Cmd() function here
 call system(<SID>Cmd() . " " . expand("%:p"))
 
-execute "bdelete " . s:buf 
+execute "bdelete " . s:cur 
 " execute "redraw!" 
 " execute "syntax on"
